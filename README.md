@@ -2,5 +2,5 @@
 
 #Formação One Oracle 
 
-- Aula de Introdução ao Javascript 
+- Aula de Javascript 
 - Aula de HTML5 e CSS3
