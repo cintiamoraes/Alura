@@ -1,0 +1,36 @@
+<canvas width = "600" height = "400" ></canvas>
+
+<script>
+
+    var tela = document.querySelector("canvas"); 
+    //escolher uma tag, neste caso usamso canvas. Posso usar aspas simples ou dupla
+   
+    var pincel = tela.getContext ("2d");
+    //peço a tela o tipo de pincel que eu quero dentro do contexto neste caso é 2D
+    //qualquer operação que eu faço atua mno meu canvas
+
+    pincel.fillStyle = "lightgrey";
+    // o atributo do pincel vai aceitar receber um valor que no caso é a cor. 
+    //Primeiro eu tenho que dizer qual será a cor para deposi eu pintar. 
+    pincel.fillRect(0,0, 600, 400);
+    // preencher um retangulo posicionado na posição tal.  
+
+    pincel.fillStyle = "green";
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = "red";
+    pincel.fillRect(400, 0, 200, 400);
+ 
+    pincel.fillStyle = "yellow";
+    pincel.beginPath();     // chamo essa função para iniciar o caminho de meu path
+    pincel.moveTo (300,200); /// move para um ponto inicial
+    pincel.lineTo (200,400);// cria a primeira linha
+    pincel.lineTo (400,400); // cria a segunda linha
+    pincel.fill(); //preenche de amarelo
+
+    pincel.fillStyle = "blue";
+    pincel.beginPath(); // crio um novo caminho
+    pincel.arc(300, 200, 50, 0, 2 * 3.14); // crio um círculo na pona do triângulo
+    pincel.fill();
+    
+</script>

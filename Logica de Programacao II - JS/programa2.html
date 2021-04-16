@@ -1,0 +1,21 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function desenhaQuadrado(x, y, cor) { // cria-se a função paa evitar a repetição no código 
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;// crio a cor que será utilizada 
+        pincel.fillRect(x, y, 50, 50); //crio os quadrados com suas dimensões
+        pincel.strokeStyle = 'black';// digo qual a cor da borda
+        pincel.strokeRect(x, y, 50, 50);// crio a borda
+
+}
+
+desenhaQuadrado(0, 0, 'green');
+desenhaQuadrado(50, 0, 'green');
+desenhaQuadrado(100, 0, 'green');
+
+</script>
